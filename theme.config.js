@@ -15,5 +15,5 @@ export default {
       </svg>
     )
   },
-  docsRepositoryBase: 'https://github.com/fanyf22/topfyf-web/pages',
+  docsRepositoryBase: 'https://github.com/fanyf22/topfyf-web/tree/main',
 }
