@@ -1,0 +1,24 @@
+name: build and deploy Nextra project to the server
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout branch
+        uses: actions/checkout@main
+      - name: build static files
+        run: npm install && npm run build
+      - name: deploy to the server
+        uses: burnett01/rsync-deployments@4.1
+        with:
+          switches: -avzh
+          path: out/
+          remote_path: /home/server/topfyf-web
+          remote_host: ${{ secrets.REMOTE_HOST }}
+          remote_port: ${{ secrets.REMOTE_PORT }}
+          remote_user: ${{ secrets.REMOTE_USER }}
+          remote_key: ${{ secrets.REMOTE_PRIVATE_KEY }}
