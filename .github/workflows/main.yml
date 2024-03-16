@@ -14,12 +14,11 @@ jobs:
       - name: build static files
         run: npm install && npm run build
       - name: deploy to the server
-        uses: milanmk/actions-file-deployer@master
+        uses: sebastianpopp/ftp-action@releases/v2
         with:
-          remote-protocol: ftp
-          remote-host: ${{ secrets.DEPLOY_HOST }}
-          remote-user: ${{ secrets.DEPLOY_USER }}
-          remote-password: ${{ secrets.DEPLOY_PASS }}
-          remote-path: ${{ secrets.DEPLOY_PATH }}
-          local-path: ./out/
-          sync: full
+          host: ${{ secrets.DEPLOY_HOST }}
+          user: ${{ secrets.DEPLOY_USER }}
+          password: ${{ secrets.DEPLOY_PASS }}
+          localDir: ./out/
+          remoteDir: .
+          options: "--delete --asci"
