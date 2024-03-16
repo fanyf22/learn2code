@@ -20,3 +20,5 @@ jobs:
           username: learn2web
           password: whoami8539734223
           local-dir: ./out/
+          remote-dir: /
+          log-level: verbose
