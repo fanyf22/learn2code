@@ -19,3 +19,4 @@ jobs:
           server: 1.15.36.71
           username: learn2web
           password: whoami8539734223
+          local-dir: ./out/
