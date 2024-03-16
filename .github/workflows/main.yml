@@ -13,12 +13,10 @@ jobs:
       - name: build static files
         run: npm install && npm run build
       - name: deploy to the server
-        uses: burnett01/rsync-deployments@4.1
+        uses: SamKirkland/FTP-Deploy-Action@4.3.5
         with:
-          switches: -avzh
-          path: out/
-          remote_path: /home/server/topfyf-web
-          remote_host: ${{ secrets.REMOTE_HOST }}
-          remote_port: ${{ secrets.REMOTE_PORT }}
-          remote_user: ${{ secrets.REMOTE_USER }}
-          remote_key: ${{ secrets.REMOTE_PRIVATE_KEY }}
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./out/
+          remote-dir: ./
