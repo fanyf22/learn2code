@@ -20,6 +20,6 @@ jobs:
           username: learn2web
           password: whoami8539734223
           local-dir: ./out/
-          remote-dir: /
+          server-dir: /
           log-level: verbose
-          timeout: 1200000
+          timeout: 120000
