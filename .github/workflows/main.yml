@@ -14,12 +14,11 @@ jobs:
       - name: build static files
         run: npm install && npm run build
       - name: deploy to the server
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: 1.15.36.71
-          username: learn2code_topfyf_cn
-          password: ${{ secrets.FTP_PASSWORD }}
-          port: 21
-          local-dir: ./out/
-          server-dir: ./
-          timeout: 60000
+        uses: easingthemes/ssh-deploy@v2.1.1
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          ARGS: "-avzr --delete"
+          REMOTE_HOST: '1.15.36.71'
+          REMOTE_USER: 'www-server''
+          SOURCE: "./out/"
+          TARGET: "/www/wwwroot/learn2code_topfyf_cn"
