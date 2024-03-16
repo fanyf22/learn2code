@@ -16,8 +16,9 @@ jobs:
       - name: deploy to the server
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
+          server: 1.15.36.71
+          username: learn2code_topfyf_cn
           password: ${{ secrets.FTP_PASSWORD }}
+          port: 21
           local-dir: ./out/
           server-dir: ./
