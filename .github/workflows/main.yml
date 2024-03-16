@@ -21,4 +21,3 @@ jobs:
           password: ${{ secrets.DEPLOY_PASS }}
           localDir: ./out/
           remoteDir: .
-          options: "--delete --asci"
