@@ -14,12 +14,10 @@ jobs:
       - name: build static files
         run: npm install && npm run build
       - name: deploy to the server
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        uses: milanmk/actions-file-deployer@master
         with:
-          server: 1.15.36.71
-          username: learn2web
-          password: whoami8539734223
-          local-dir: ./out/
-          server-dir: /
-          log-level: verbose
-          timeout: 120000
+          remote-protocol: ftp
+          remote-host: 1.15.36.71
+          remote-user: learn2web
+          remote-password: whoami8539734223
+          local-path: ./out/
