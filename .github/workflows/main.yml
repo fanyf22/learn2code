@@ -1,4 +1,4 @@
-name: build and deploy Nextra project to the server
+name: Build and deploy Nextra project to the server
 on:
   workflow_dispatch:
   push:
@@ -21,4 +21,4 @@ jobs:
           REMOTE_HOST: "1.15.36.71"
           REMOTE_USER: "www-server"
           SOURCE: "./out/"
-          TARGET: "/www/wwwroot/learn2code_topfyf_cn"
+          TARGET: "/www/wwwroot/learn2code.topfyf.cn"
