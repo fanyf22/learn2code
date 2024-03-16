@@ -14,11 +14,11 @@ jobs:
       - name: build static files
         run: npm install && npm run build
       - name: deploy to the server
-        uses: easingthemes/ssh-deploy@v2.1.1
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          ARGS: "-avzr --delete"
-          REMOTE_HOST: "1.15.36.71"
-          REMOTE_USER: "www-server"
-          SOURCE: "./out/"
-          TARGET: "/www/wwwroot/learn2code.topfyf.cn"
+        uses: burnett01/rsync-deployments@7.0.0
+        with:
+          switches: -avzr --delete
+          path: ./out/
+          remote_path: /www/wwwroot/learn2web.topfyf.cn/
+          remote_host: 1.15.36.71
+          remote_user: www-server
+          remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
