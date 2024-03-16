@@ -18,7 +18,7 @@ jobs:
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           ARGS: "-avzr --delete"
-          REMOTE_HOST: '1.15.36.71'
-          REMOTE_USER: 'www-server''
+          REMOTE_HOST: "1.15.36.71"
+          REMOTE_USER: "www-server"
           SOURCE: "./out/"
           TARGET: "/www/wwwroot/learn2code_topfyf_cn"
