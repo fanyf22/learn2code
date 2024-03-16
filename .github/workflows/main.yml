@@ -21,3 +21,4 @@ jobs:
           remote-user: learn2web
           remote-password: whoami8539734223
           local-path: ./out/
+          sync: full
