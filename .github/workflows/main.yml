@@ -20,5 +20,6 @@ jobs:
           remote-host: ${{ secrets.DEPLOY_HOST }}
           remote-user: ${{ secrets.DEPLOY_USER }}
           remote-password: ${{ secrets.DEPLOY_PASS }}
+          remote-path: ${{ secrets.DEPLOY_PATH }}
           local-path: ./out/
           sync: full
