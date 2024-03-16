@@ -20,5 +20,5 @@ jobs:
           path: ./out/
           remote_path: /www/wwwroot/learn2web.topfyf.cn/
           remote_host: 1.15.36.71
-          remote_user: www-server
+          remote_user: server
           remote_key: ${{ secrets.SSH_PRIVATE_KEY }}
