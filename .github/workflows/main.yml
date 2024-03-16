@@ -17,8 +17,8 @@ jobs:
         uses: milanmk/actions-file-deployer@master
         with:
           remote-protocol: ftp
-          remote-host: 1.15.36.71
-          remote-user: learn2web
-          remote-password: whoami8539734223
+          remote-host: ${{ secrets.DEPLOY_HOST }}
+          remote-user: ${{ secrets.DEPLOY_USER }}
+          remote-password: ${{ secrets.DEPLOY_PASS }}
           local-path: ./out/
           sync: full
