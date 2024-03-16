@@ -1,0 +1,18 @@
+.header {
+  font-size: min(3rem, max(7vw, 2rem));
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.subHeader {
+  font-size: min(2.5rem, max(6vw, 1.5rem));
+  font-weight: 350;
+  padding-left: min(5rem, 20vw);
+}
+
+.description {
+  font-size: min(1.2rem, max(3.5vw, 1rem));
+  font-weight: 300;
+  padding-top: min(2rem, 5vw);
+  max-width: max(30rem, 40vw);
+}
