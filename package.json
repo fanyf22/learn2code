@@ -1,19 +1,19 @@
 {
-  "name": "topfyf-web",
+  "name": "learn2code",
   "version": "1.0.0",
-  "description": "A learning website for web development deployed on topfyf.cn",
+  "description": "Learn2Code - A website for learning web programming.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
   },
   "keywords": [],
-  "author": "OrthoPole",
-  "license": "ISC",
+  "author": "Philip Fan",
+  "license": "MIT",
   "dependencies": {
     "next": "^14.1.3",
-    "nextra": "^2.13.4",
-    "nextra-theme-docs": "^2.13.4",
+    "nextra": "^3.0.0-alpha.22",
+    "nextra-theme-docs": "^3.0.0-alpha.22",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
