@@ -43,7 +43,7 @@ export default {
   logo: <Logo/>,
   project: {link: project},
   docsRepositoryBase: `${project}/tree/main`,
-  toc: {title: '目录', backToTop: true},
+  toc: {title: '目录', backToTop: false},
   editLink: {content: '在 GitHub 上编辑此页',},
   feedback: {content: '有任何疑问？在这里给我们反馈→'},
   head: Header,
