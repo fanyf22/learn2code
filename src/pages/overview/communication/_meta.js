@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   "ip-address": "IP 地址",
   "domain": "域名",
   "port": "端口",

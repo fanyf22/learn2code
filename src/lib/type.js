@@ -1,6 +1,6 @@
 import {useConfig} from 'nextra-theme-docs';
 
-export function useType() {
+export default function useType() {
   const {frontMatter} = useConfig();
   return frontMatter.type || 'article';
 }

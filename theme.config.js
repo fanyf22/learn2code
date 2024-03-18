@@ -1,15 +1,15 @@
-import {useRouter} from 'next/router'
-import {useConfig} from 'nextra-theme-docs'
-import {Link} from 'nextra-theme-docs'
-import {email, author, name, github, description, domain, project, Logo, license} from '@/global'
-import {useType} from '@/lib/type'
+import {useRouter} from 'next/router';
+import {useConfig} from 'nextra-theme-docs';
+import {Link} from 'nextra-theme-docs';
+import {email, author, name, github, description, domain, project, Logo, license} from '@/global';
+import useType from '@/lib/type';
 
 const Header = () => {
   const {asPath, defaultLocale, locale} = useRouter();
   const {title, frontMatter} = useConfig();
-  const path = defaultLocale === locale ? asPath : `/${locale}${asPath}`;
+  const path = defaultLocale == locale ? asPath : `/${locale}${asPath}`;
   const url = `https://${domain}${path}`;
-  const titl = title ? `${title} - ${name}` : name;
+  const titl = title && path != '/' ? `${title} - ${name}` : name;
   const desc = frontMatter.description || description;
   return (
     <>
